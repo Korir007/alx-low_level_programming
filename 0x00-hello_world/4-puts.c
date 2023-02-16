@@ -1,9 +1,14 @@
 #include <stdio.h>
+
 /**
- * This is where the program begins
+ * main - entry point
  *
- * reurns 0
+ * Description: A simple C program.
+ *
+ * Return: 0 is a show of (Success)
+ *
  */
+
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
