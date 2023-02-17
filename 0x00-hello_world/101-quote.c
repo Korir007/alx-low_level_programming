@@ -2,9 +2,9 @@
 #include <unistd.h>
 /**
  * main - Prints a quote
- * 
+ *
  * Return: 0(Success)
- * 
+ *
 */
 
 int main(void)
