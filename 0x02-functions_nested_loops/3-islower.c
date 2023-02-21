@@ -2,13 +2,13 @@
 
 /**
  * _islower - Checks c if it is lower case
- * @c: The character to prin
+ * @g: The character to prin
  *
  * Return: 1 if true and 0 if false
  */
-int _islower(int c)
+int _islower(int g)
 {
-	if (c < 97)
+	if (g < 97)
 	{
 		return (0);
 	}
