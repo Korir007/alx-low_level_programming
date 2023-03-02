@@ -1,28 +1,31 @@
 /**
  * _strncat - concatinate 2 strings.
+ * 
  * @dest: first string.
  * @src: second string.
  * @n: the number of bytes to use from src.
- * Return: string.
+ * 
+ * Return: @dest
  */
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0, k = 0;
+	int c, i;
 
-	while (dest[i] != '\0')
-		i++;
+	c = 0;
 
-	while (src[k] != '\0' && n > k)
-	{
-		dest[i] = src[k];
-		k++;
-		i++;
-	}
-	if(n > 0)
-	{
-		dest[i] = '\0';
-	}
+	/*find size of dest array*/
+	while (dest[c])
+		c++;
+
+	/**
+	 * src does not need to be null terminated
+	 * if it contains n or more bytes
+	*/
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[c + i] = src[i];
+	/*null terminate dest*/
+	dest[c + i] = '\0';
 
 	return (dest);
 }
