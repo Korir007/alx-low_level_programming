@@ -1,31 +1,40 @@
 #include "3-calc.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
- * get_op_func - Compares function with pointer and returns the equal.
- * @s: points a char
- * Return: Returns the function and the operator when equal
-**/
-
-int (*get_op_func(char *s))(int, int)
+ * main - check the code for ALX students.
+ * @argc: argument count.
+ * @argv: argument vector.
+ *
+ * Return: Always 0.
+ */
+int main(int argc, char *argv[])
 {
-op_t ops[] = {
-{"+", op_add},
-{"-", op_sub},
-{"*", op_mul},
-{"/", op_div},
-{"%", op_mod},
-{NULL, NULL}
-};
+	int a, b;
+	int (*operation)(int, int);
 
-int i = 0;
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
 
-while (ops[i].op != NULL)
-{
-if (!strcmp(ops[i].op, s))
-return (ops[i].f);
-i++;
-}
-return (NULL);
+	if (argv[2][1])
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	operation = get_op_func(argv[2]);
+
+	if (operation == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	printf("%d\n", operation(a, b));
+	return (0);
 }
