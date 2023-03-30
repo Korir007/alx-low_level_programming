@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * bmain - function executed before main
+ * Return: no return.
+ */
+
 void print_message(void) {
     printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
 }
@@ -9,4 +14,3 @@ int main(void) {
     // rest of main function code
     return 0;
 }
-
