@@ -8,13 +8,13 @@
 size_t list_len(const list_t *h)
 
 {
-	size_t nelem;
+	size_t mmlen;
 
-	nelem = 0;
+	mmlen = 0;
 	while (h != NULL)
 	{
 		h = h->next;
-		nelem++;
+		mmlen++;
 	}
-	return (nelem);
+	return (mmlen);
 }
