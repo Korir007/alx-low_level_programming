@@ -7,9 +7,10 @@
  * @filename: files to be processed by read_textfile
  * @letters: number of letters to be processed by read_textfile
  *
- * Return: 0 on fail or output processed by @letters
- *
+ * Return: 0 on if file can not open or read or fails to write,
+ * also if filename is NULL.
 */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file;
